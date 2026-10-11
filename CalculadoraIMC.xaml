@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaUI.CalculadoraIMC"
+             Title="CalculadoraIMC">
+    <!-- ScrollView esto nos permite deslizar si el teclado tapa parte de la pantalla -->
+
+    <ScrollView>
+        <!-- VerticalStackLayout: apila los controles uno debajo de otro -->
+        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+            <Label Text="Calculadora IMC" FontSize="24" FontAttributes="Bold" TextColor="#0ED9F0"
+             HorizontalOptions="Center"/>
+            
+        <!-- Campo para agregar el peso -->
+            <Label Text="Peso (KG)" TextColor="Black" FontAttributes="Bold"/>
+
+            <!-- Border: dibuja un marco con esquinas redondeadas al rededor del Entry -->
+            <Border Stroke="Black" StrokeShape="RoundRectangle 8" Padding="5,0">
+                
+                <!-- x:Name es el nombre con el que C# encuentra este control (txtPeso.text)-->
+                <!-- Keyboard="Numeric" muestra en pantalla numeros -->
+                <Entry x:Name="txtPeso" Placeholder="Ejemplo: 70.5" Keyboard="Numeric"/>
+                
+            </Border>
+            
+            <!-- Campo Altura -->
+
+            <Label Text="Altura (Metros)" TextColor="Black" FontAttributes="Bold"/>
+
+            <!-- Border: dibuja un marco con esquinas redondeadas al rededor del Entry -->
+            <Border Stroke="Black" StrokeShape="RoundRectangle 8" Padding="5,0">
+                <!-- x:Name es el nombre con el que C# encuentra este control (txtPeso.text)-->
+                <!-- Keyboard="Numeric" muestra en pantalla numeros -->
+                <Entry x:Name="txtAltura" Placeholder="Ejemplo: 1.75" Keyboard="Numeric"/>
+            </Border>
+            
+            <!-- Boton: Clicked="...." indica que metodo de C# se ejecuta al tocarlo -->
+            <Button Text="Calcular IMC" Background="#4A0BD6" TextColor="White" FontAttributes="Bold"
+                    CornerRadius="8" HeightRequest="48" Clicked="Button_Clicked"/>
+            
+            <!-- Tarjeta de resultado: IsVisible= False la oculta hasta que se calcule  -->
+            <Border x:Name="brResultado" StrokeShape="RoundRectangle 12" Padding="20" IsVisible="False"
+                    Margin="0,10,0,0">
+            <!-- Estos dos Label se van a llenar desde C# -->
+                <VerticalStackLayout>
+                    <Label x:Name="lblValorIMC" FontSize="32" FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+                <Label x:Name="lblDiagnostico" FontSize="16" FontAttributes="Bold" 
+                       HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Label x:Name="lblRangoIMC" Text="Rangos del IMC: Bajo peso: menos de 18.5. Peso normal: 18.5 - 24.9. Sobrepeso: 25 - 29. Obesidad 30 o mas."
+                   FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" 
+                   VerticalOptions="Start" Margin="0,10,0,0" TextColor="#0C8A99" FontAttributes="Bold"/>
+
+
+
+        </VerticalStackLayout> 
+    </ScrollView>
+</ContentPage>
