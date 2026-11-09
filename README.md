@@ -1,7 +1,7 @@
 Integrantes:
-Carlos Samir Roque 
-Edson Alexander Guzmán
-Grizzly Azeneth Bulnes
+Carlos Samir Roque 202120130046
+Edson Alexander Guzmán 202410130145
+Grizzly Azeneth Bulnes 202210130074
 
 Instrucciones: 
 Antes de utilizar la aplicación en el emulador, es necesario crear el usuario desde Postman, 
