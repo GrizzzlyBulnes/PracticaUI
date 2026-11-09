@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaUI.ConversorMoneda"
+             Title="ConversorMoneda">
+    
+    <VerticalStackLayout Padding="30" Spacing="15" VerticalOptions="Center">
+        <Label Text="Conversor de Monedas" FontSize="22" FontAttributes="Bold"/>
+        <!-- Aqui el usuario escribe cuanto dinero quiere convertir -->
+        <Entry x:Name="txtMonto" FontSize="15" Placeholder="Monto a convertir" Keyboard="Numeric"/>
+
+        <Label Text="Moneda de origen"/>
+        <!-- Lista desplegable. Title es el texto que se mira antes de elegir cualquier opcion-->
+        <Picker x:Name="pckOrigen" Title="Seleccione origen">
+            <Picker.Items>
+                <x:String>HNL (Lempira)</x:String>
+                <x:String>USD (Dolar)</x:String>
+                <x:String>EUR (Euro)</x:String>
+                <x:String>MXN (Peso)</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Moneda de destino"/>
+        <Picker x:Name="pckDestino" Title="Seleccione destino">
+            <Picker.Items>
+                <x:String>HNL (Lempira)</x:String>
+                <x:String>USD (Dolar)</x:String>
+                <x:String>EUR (Euro)</x:String>
+                <x:String>MXN (Peso)</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Convertir" Clicked="onConvertirClicked" BackgroundColor="#0D9488" TextColor="White"/>
+
+        <Label x:Name="lblResultado" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

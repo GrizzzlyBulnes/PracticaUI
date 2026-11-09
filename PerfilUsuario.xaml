@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaUI.PerfilUsuario"
+             Title="Mi perfil">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label Text="Mi perfil" FontSize="28" FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Label Text="Nombre:" FontAttributes="Bold"/>
+        
+        <Label x:Name="lblNombre" Text="Cargando..."/>
+
+        <Label Text="Disponibilidad:" FontAttributes="Bold"/>
+        
+        <Label x:Name="lblDisponible" Text="Cargando..."/>
+
+        <Label Text="Años de experiencia:" FontAttributes="Bold"/>
+        
+        <Label x:Name="lblExperiencia" Text="Cargando..."/>
+
+        <Button Text="Cerrar sesión" BackgroundColor="#305F80" Clicked="CerrarSesion_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PracticaUI.LoginPage"
+             Title="Login">
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label Text="Bievenido" FontSize="32" FontAttributes="Bold" TextColor="Black" 
+               HorizontalOptions="Center"/>
+        
+        <Label Text="Inicia sesión con tu cuenta" FontSize="16" TextColor="Black"
+               HorizontalOptions="Center"/>
+        
+        <Entry x:Name="txtCorreo" Placeholder="Correo electronico" Keyboard="Email"
+               BackgroundColor="White" TextColor="Black"/>
+        
+        <Entry x:Name="txtContrasena" Placeholder="Contraseña" IsPassword="True" 
+               BackgroundColor="White" TextColor="Black"/>
+
+        <Button Text="Iniciar sesión" BackgroundColor="#305F80" TextColor="White"
+                CornerRadius="12" Clicked="Login_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>

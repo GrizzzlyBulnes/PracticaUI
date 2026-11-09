@@ -11,7 +11,7 @@ namespace PracticaUI
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new CalculadoraIMC());
+            return new Window(new NavigationPage(new LoginPage()));
         }
     }
 }
